@@ -33,7 +33,7 @@ export const escapeCheckSession$ = () => {
         if (sessionStorageToken === "null" || !sessionStorageToken) {
             const url = location.origin + location.pathname;
             // @ts-ignore
-            window.location.href = casBaseURL + '?redirectUrl=' + url;
+            // window.location.href = casBaseURL + '?redirectUrl=' + url;
         }
         const token = sessionStorageToken;
         const apiUrl = await getApiResource(token);
